@@ -21,14 +21,18 @@ Instead of `npm start`, you can use nodemon for automatic reloading. Run the ser
 `npx nodemon`
 
 
-## Environment Variables
+## Configuration
 
-The project uses the following environment variables:
+This project requires a `.env` file to be placed in the project root directory (`./`). This file should contain the following environment variables:
 
-- `DATABASE`: The MongoDB connection string. Default is `'mongodb://127.0.0.1:27017/'`.
-- `PORT`: The port the server will listen on. Default is `4000`.
-- `JWT_SECRET`: The secret key used for JWT authentication. Replace `"secret_here"` with your own secret key.
-- `LOG_LEVEL`: The level of logging. Default is `debug`.
-- `NODE_ENV`: The environment the application is running in. Default is `development`.
-
-Remember to replace the default values with your own, especially `JWT_SECRET`.
+```properties
+DATABASE='mongodb://127.0.0.1:27017/'
+PORT=4000
+JWT_SECRET="Your JWT Secret"
+LOG_LEVEL=debug
+NODE_ENV=development
+clientid=Your Discord Client ID
+clientsecret=Your Discord Client Secret
+bottoken="Your Discord Bot Token"
+channelid=Your Discord Channel ID
+```

@@ -24,6 +24,9 @@ app.use(responseMiddleware);
 const v1UserRouter = require("./v1/routes/user.routes.js");
 app.use("/v1/users", v1UserRouter);
 
+const v1DiscordRouter = require("./v1/routes/discord/discord.routes.js");
+app.use("/v1/discord", v1DiscordRouter);
+
 
 // Use the infoLoggerMiddleware to log information about each request and response
 app.use(infoLoggerMiddleware);
